@@ -2,16 +2,14 @@
 
 const express = require('express');
 const cors = require('cors');
-
+const app = express();
 app.use(cors());
 
 app.use(express.urlencoded({ extended: true }));
 
-const app = express();
-
 app.use(express.json());
 
-module.exports = server;
+module.exports = {server:app, start: port => app.listen(port, () => console.log('server is running') ) };
 
 
 // app.post('/signup', async (req, res) => {

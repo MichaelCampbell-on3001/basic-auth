@@ -2,11 +2,11 @@
 
 require('dotenv').config();
 
-const app =require('./server');
+const app = require('./server');
 
 const PORT = process.env.PORT || 3000;
 
-const { sequelize } = require("./src/auth/models/index");
+const sequelize = require("./src/auth/models/index");
 
 
 // ensure tables are created

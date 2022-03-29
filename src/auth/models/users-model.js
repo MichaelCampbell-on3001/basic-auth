@@ -1,5 +1,6 @@
 'user strict'
 
+const sequelize = require ('./index')
 const Users = sequelize.define('User', {
   username: {
     type: DataTypes.STRING,
