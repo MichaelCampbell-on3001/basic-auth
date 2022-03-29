@@ -4,7 +4,9 @@ const { Sequelize, DataTypes } = require('sequelize');
 
 const userSchema = require('./users-model');
 
-const sequelize = new Sequelize(process.env.DATABASE_URL);
+const DATABASE_URL = 'sqlite:memory:';
+
+const sequelize = new Sequelize(DATABASE_URL, {});
 
 const UserModel = userSchema(sequelize, DataTypes)
 
