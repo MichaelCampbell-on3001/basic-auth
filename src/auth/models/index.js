@@ -2,11 +2,12 @@
 
 const { Sequelize, DataTypes } = require('sequelize');
 
-
-const Users = require('./users-model');
+const userSchema = require('./users-model');
 
 const sequelize = new Sequelize(process.env.DATABASE_URL);
 
+const UserModel = userSchema(sequelize, DataTypes)
+
 module.exports={
-  sequelize
+  sequelize, UserModel
 }
