@@ -2,9 +2,9 @@
 
 // 3rd Party Resources
 // const express = require('express');
-const bcrypt = require('bcrypt');
-const base64 = require('base-64');
-const { db } = require('./src/auth/models');
+// const bcrypt = require('bcrypt');
+// const base64 = require('base-64');
+// const { db } = require('./src/auth/models');
 // const { Sequelize, DataTypes } = require('sequelize');
 
 // Prepare the express app
@@ -85,9 +85,9 @@ const { db } = require('./src/auth/models');
 // });
 
 // make sure our tables are created, start up the HTTP server.
-db.sync()
-  .then(() => {
-    app.listen(3000, () => console.log('server up'));
-  }).catch(e => {
-    console.error('Could not start server', e.message);
-  });
+// db.sync()
+//   .then(() => {
+//     app.listen(3000, () => console.log('server up'));
+//   }).catch(e => {
+//     console.error('Could not start server', e.message);
+//   });
